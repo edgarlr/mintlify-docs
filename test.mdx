@@ -7,7 +7,7 @@ version: 1.0.0
 
 # Main Heading (H1)
 
-This is a regular paragraph with **bold text**, *italic text*, ~~strikethrough~~, <u>underline</u>, and `inline code`. You can also combine them like **_bold and italic_** or `**bold code**`.
+This is a regular paragraph with **bold text**, _italic text_, ~~strikethrough~~, <u>underline</u>, and `inline code`. You can also combine them like **_bold and italic_** or `**bold code**`.
 
 ## Text Formatting (H2)
 
@@ -18,6 +18,7 @@ You can highlight ==important text== like this.
 ### Lists (H3)
 
 **Unordered list:**
+
 - First item
 - Second item with `inline code`
 - Third item with **bold**
@@ -26,8 +27,9 @@ You can highlight ==important text== like this.
 - Fourth item
 
 **Ordered list:**
+
 1. First step
-2. Second step with *emphasis*
+2. Second step with _emphasis_
 3. Third step with `code`
 4. Fourth step
 
@@ -67,8 +69,7 @@ No syntax highlighting
 
 ###### Blockquotes (H6)
 
-> This is a blockquote.
-> It can span multiple lines.
+> This is a blockquote. It can span multiple lines.
 >
 > And have multiple paragraphs.
 
@@ -81,13 +82,15 @@ No syntax highlighting
 ### Card Component
 
 <Card title="Getting Started" icon="rocket" href="/docs/intro">
-  This is a card component with a title, icon, and link. Cards are great for showcasing features or linking to important pages.
+  This is a card component with a title, icon, and link. Cards are great for
+  showcasing features or linking to important pages.
 </Card>
 
 <Card title="API Reference" icon="code" iconColor="blue">
   Another card without an href. Just informational content goes here.
 
-  You can have multiple paragraphs inside!
+You can have multiple paragraphs inside!
+
 </Card>
 
 ### Steps Component
@@ -101,6 +104,7 @@ No syntax highlighting
     ```
 
     Make sure you have Node.js version 18 or higher.
+
   </Step>
 
   <Step title="Configure Environment">
@@ -110,6 +114,7 @@ No syntax highlighting
     DATABASE_URL=postgresql://localhost:5432/mydb
     API_KEY=your_api_key_here
     ```
+
   </Step>
 
   <Step title="Run Development Server">
@@ -120,6 +125,7 @@ No syntax highlighting
     ```
 
     Visit `http://localhost:3000` to see your app!
+
   </Step>
 </Steps>
 
@@ -133,6 +139,7 @@ No syntax highlighting
     - Real-time collaboration
     - Custom components
     - GitHub integration
+
   </Accordion>
 
   <Accordion title="How do I get started?">
@@ -143,6 +150,7 @@ No syntax highlighting
     3. Run `npm run dev`
 
     Check out our [documentation](https://docs.example.com) for more details.
+
   </Accordion>
 
   <Accordion title="What technologies are used?">
@@ -154,6 +162,7 @@ No syntax highlighting
     - **Database**: PostgreSQL
 
     See the full tech stack in our README.
+
   </Accordion>
 </AccordionGroup>
 
@@ -185,19 +194,22 @@ Text after the rule.
 <Card title="Complex Nested Example" icon="layers">
   This card contains multiple nested elements:
 
-  **List inside card:**
-  1. First item with `code`
-  2. Second item with **bold**
-  3. Third item with [a link](https://example.com)
+**List inside card:**
 
-  **Code block inside card:**
-  ```typescript
-  const example = "Hello from inside a card!";
-  console.log(example);
-  ```
+1. First item with `code`
+2. Second item with **bold**
+3. Third item with [a link](https://example.com)
 
-  > And even a blockquote inside the card!
-  > Pretty cool, right?
+**Code block inside card:**
+
+```typescript
+const example = "Hello from inside a card!";
+console.log(example);
+```
+
+> And even a blockquote inside the card!
+> Pretty cool, right?
+
 </Card>
 
 ### Steps with Nested Accordions
@@ -225,6 +237,7 @@ Text after the rule.
         ```
       </Accordion>
     </AccordionGroup>
+
   </Step>
 
   <Step title="Development Phase">
@@ -234,43 +247,40 @@ Text after the rule.
 
 ---
 
-## Edge Cases & Special Characters
+## Special Characters & Adjacent Marks
 
 Text with special characters: `~/.bashrc` and `$HOME/config`.
 
 Inline code with special chars: `function(param) { return true; }`.
 
-**Bold text with `inline code` inside it**.
+**Bold text** with `inline code` as adjacent marks.
 
-Link with code: [Check `package.json`](https://example.com/package.json).
-
-Code with emphasis: `**this should render as code, not bold**`.
+Code preventing markdown parsing: `**this should render as code, not bold**`.
 
 ### Empty Components
 
-<Card title="Empty Card">
-</Card>
+<Card title="Empty Card"></Card>
 
 <Steps>
-  <Step title="Empty Step">
-  </Step>
+  <Step title="Empty Step"></Step>
 </Steps>
 
 ---
 
-## Text Combinations
+## Multiple Marks on Same Line
 
-1. **Bold with [link](https://example.com)**
-2. *Italic with `code`*
-3. ~~Strikethrough with **bold**~~
-4. <u>Underline with *italic*</u>
-5. All together: **_~~`combined`~~_**
+1. **Bold** and [link](https://example.com) on same line
+2. _Italic_ and `code` on same line
+3. ~~Strikethrough~~ and **bold** on same line
+4. <u>Underline</u> and *italic* on same line
+5. Multiple marks: `code` and **bold** and _italic_ and ~~strikethrough~~ all separate
 
 ---
 
 ## The End
 
 This document tests all supported TipTap extensions and MDX components. Use it to verify:
+
 - ✅ All markdown syntax works
 - ✅ All text marks (bold, italic, code, etc.) serialize correctly
 - ✅ All custom components render and serialize
