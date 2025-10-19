@@ -7,7 +7,7 @@ version: 1.0.0
 
 # Main Heading (H1)
 
-This is a regular paragraph with **bold text**, _italic text_, ~~strikethrough~~, <u>underline</u>, and `inline code`. You can also combine them like **_bold and italic_** or `**bold code**`.
+This is a regular paragraph with **bold text**, _italic text_, ~~strikethrough~~, <u>underline</u>, and `inline code`. You can also combine them like _**bold and italic**_ or `**bold code**`.
 
 ## Text Formatting (H2)
 
@@ -31,7 +31,8 @@ You can highlight ==important text== like this.
 1. First step
 2. Second step with _emphasis_
 3. Third step with `code`
-4. Fourth step
+
+Fourth step
 
 #### Mixed nested lists (H4)
 
@@ -69,9 +70,7 @@ No syntax highlighting
 
 ###### Blockquotes (H6)
 
-> This is a blockquote. It can span multiple lines.
->
-> And have multiple paragraphs.
+> This is a blockquote. It can span multiple lines.And have multiple paragraphs.
 
 > **Note**: You can use formatting inside blockquotes too!
 
@@ -81,16 +80,15 @@ No syntax highlighting
 
 ### Card Component
 
-<Card title="Getting Started" icon="rocket" href="/docs/intro">
+<Card title="Getting Startedasdasd" icon="database" href="https://ula.com" iconColor="orange">
   This is a card component with a title, icon, and link. Cards are great for
   showcasing features or linking to important pages.
 </Card>
 
-<Card title="API Reference" icon="code" iconcolor="blue">
+<Card title="API Reference" icon="code" iconColor="blue">
   Another card without an href. Just informational content goes here.
 
-You can have multiple paragraphs inside!
-
+  You can have multiple paragraphs inside!
 </Card>
 
 ### Steps Component
@@ -104,7 +102,6 @@ You can have multiple paragraphs inside!
     ```
 
     Make sure you have Node.js version 18 or higher.
-
   </Step>
 
   <Step title="Configure Environment">
@@ -115,6 +112,14 @@ You can have multiple paragraphs inside!
     API_KEY=your_api_key_here
     ```
 
+    <Step title="Configure Environment">
+      Create a `.env` file with your configuration:
+
+      ```bash
+      DATABASE_URL=postgresql://localhost:5432/mydb
+      API_KEY=your_api_key_here
+      ```
+    </Step>
   </Step>
 
   <Step title="Run Development Server">
@@ -125,7 +130,6 @@ You can have multiple paragraphs inside!
     ```
 
     Visit `http://localhost:3000` to see your app!
-
   </Step>
 </Steps>
 
@@ -140,7 +144,6 @@ You can have multiple paragraphs inside!
     - Real-time collaboration
     - Custom components
     - GitHub integration
-
   </Accordion>
 
   <Accordion title="How do I get started?">
@@ -151,7 +154,6 @@ You can have multiple paragraphs inside!
     3. Run `npm run dev`
 
     Check out our [documentation](https://docs.example.com) for more details.
-
   </Accordion>
 
   <Accordion title="What technologies are used?">
@@ -163,7 +165,6 @@ You can have multiple paragraphs inside!
     - **Database**: PostgreSQL
 
     See the full tech stack in our README.
-
   </Accordion>
 </AccordionGroup>
 
@@ -173,14 +174,10 @@ You can have multiple paragraphs inside!
 
 ### Hard Breaks
 
-This line has a hard break after it.\
+This line has a hard break after it.
 And this is the next line (using backslash for hard break).
 
 ### Images
-
-![Sample Image](https://mintlify-assets.b-cdn.net/bigbend.jpg)
-
-![Image with title](https://mintlify-assets.b-cdn.net/bigbend.jpg "This is the image title")
 
 ### Horizontal Rules
 
@@ -192,24 +189,23 @@ Text after the rule.
 
 ### Nested Components Example
 
-<Card title="Complex Nested Example" icon="layers">
+<Card title="Complex Nested Example" icon="layers" iconColor="gray">
   This card contains multiple nested elements:
 
-**List inside card:**
+  **List inside card:**
 
-1. First item with `code`
-2. Second item with **bold**
-3. Third item with [a link](https://example.com)
+  1. First item with `code`
+  2. Second item with **bold**
+  3. Third item with [a link](https://example.com)
 
-**Code block inside card:**
+  **Code block inside card:**
 
-```typescript
-const example = "Hello from inside a card!";
-console.log(example);
-```
+  ```typescript
+  const example = "Hello from inside a card!";
+  console.log(example);
+  ```
 
-> And even a blockquote inside the card! Pretty cool, right?
-
+  > And even a blockquote inside the card! Pretty cool, right?
 </Card>
 
 ### Steps with Nested Accordions
@@ -236,12 +232,15 @@ console.log(example);
         API_KEY=...
         ```
       </Accordion>
-    </AccordionGroup>
 
+      <Accordion title="New Accordion">
+        Accordion content...
+      </Accordion>
+    </AccordionGroup>
   </Step>
 
   <Step title="Development Phase">
-    Start developing your application.
+    Start developiasdng your application.
   </Step>
 </Steps>
 
@@ -272,7 +271,7 @@ Code preventing markdown parsing: `**this should render as code, not bold**`.
 1. **Bold** and [link](https://example.com) on same line
 2. _Italic_ and `code` on same line
 3. ~~Strikethrough~~ and **bold** on same line
-4. <u>Underline</u> and *italic* on same line
+4. <u>Underline</u> and _italic_ on same line
 5. Multiple marks: `code` and **bold** and _italic_ and ~~strikethrough~~ all separate
 
 ---
